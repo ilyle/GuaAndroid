@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="search"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.codingending.library.FairySearchView
+            android:id="@+id/sv_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_item"
+            android:background="@color/color_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showBackButton="true"
+            app:showCancelButton="false"
+            app:showClearButton="true"
+            app:showSearchIcon="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:listitem="@layout/item_search_history" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl_search_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="@color/white"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="@color/color_primary">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

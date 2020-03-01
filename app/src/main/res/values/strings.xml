@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">GuaAndroid</string>
+    <string name="app_name">呱呱安卓</string>
+
+    <string name="suggestion">推荐</string>
+    <string name="collection">收藏</string>
+
+    <string name="article_details">文章详情</string>
+
+    <string name="add_collection">添加收藏</string>
+    <string name="remove_collection">移除收藏</string>
 </resources>
